@@ -1,5 +1,5 @@
 #modules.py
-COMMANDS = ["new","help"]
+COMMANDS = ["new","help","line"]
 
 def isCommand(cmd):
 	if(cmd in COMMANDS):
