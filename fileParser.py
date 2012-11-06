@@ -5,11 +5,12 @@ import commandParser
 def beginParsing(filename):
 	#check file exists
 	try:
-		with open(filename) as f: pass
+		with open(filename,'r') as f: pass
 	except IOError as e:
-		print "File "+filename+" not found."
+		print "File '"+filename+"'' not found."
+		exit()
 
 	#start parsing file
 	for line in open(filename,'r').readlines():
 		commandParser.parse(line)
-	
+		#print line
