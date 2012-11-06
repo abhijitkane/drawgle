@@ -9,7 +9,7 @@ def begin():
 	line=""
 	while True:
 		line = raw_input(">>")
-		if(line=="endsession"):
+		if(line=="endsession" or line=='ends'):
 			break
 		commandParser.parse(line);
 
