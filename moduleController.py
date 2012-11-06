@@ -7,11 +7,12 @@ def isCommand(cmd):
 	else:
 		return False
 
-def invokeCommand(wholecmd):
+def invokeCommand(wholecmd,imageName):
 	cmd=wholecmd.split()[0]
 	if not(isCommand(cmd)):
 		print "Invalid command '"+cmd+"'. Type help to see a list of commands"
 	else:
 		importCode = "from modules."+cmd+" import runModule"
 		exec importCode
-		runModule(wholecmd)
+		newImageName = runModule(wholecmd, imageName)
+		return newImageName

@@ -1,5 +1,5 @@
 #module HELP
 #list of in-built commands
 
-def runModule():
+def runModule(wholecmd,imgname):
 	print "HELP is running..."

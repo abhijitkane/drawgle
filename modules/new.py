@@ -1,7 +1,7 @@
 #module new
 import Image
 #syntax: new canvasname width height
-def runModule(wholecmd):
+def runModule(wholecmd, imageName):
 	
 	commandSplit = wholecmd.split()
 	if commandSplit[0]=="new":
@@ -20,7 +20,8 @@ def runModule(wholecmd):
 
 				canvasname = commandSplit[1]
 
-				image = Image.new(mode='RGB',size=(width,height),color=(255,255,255))
-				image.save("images/"+canvasname+".png")
+				newimage = Image.new(mode='RGB',size=(width,height),color=(255,255,255))
+				newimage.save("images/"+canvasname+".png")
+				return canvasname
 	else:
 		print "Error"

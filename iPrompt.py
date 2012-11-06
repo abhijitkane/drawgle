@@ -7,10 +7,11 @@ ENDSESSION_BANNER = "--End of interactive drawgle session--"
 def begin():
 	print PROMPT_BANNER
 	line=""
+	imagePath=None
 	while True:
 		line = raw_input(">>")
 		if(line=="endsession" or line=='ends'):
 			break
-		commandParser.parse(line);
+		imagePath = commandParser.parse(line,imagePath);
 
 	print ENDSESSION_BANNER

@@ -10,7 +10,8 @@ def beginParsing(filename):
 		print "File '"+filename+"'' not found."
 		exit()
 
+	imagePath = None
 	#start parsing file
 	for line in open(filename,'r').readlines():
-		commandParser.parse(line)
+		imagePath = commandParser.parse(line,imagePath)
 		#print line
