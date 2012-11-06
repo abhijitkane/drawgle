@@ -1,2 +1,4 @@
 Imaging-1.1.7
 *.pyc
+*.png
+*.test
