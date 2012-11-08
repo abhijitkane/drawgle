@@ -1,5 +1,7 @@
 #modules.py
-COMMANDS = ["new","help","line"]
+COMMANDS = ["new","load","help","line"]
+#NOTE: Each module must implement runModule(wholecmd,imagename), and return the name of the file operated on
+
 
 def isCommand(cmd):
 	if(cmd in COMMANDS):
@@ -14,5 +16,6 @@ def invokeCommand(wholecmd,imageName):
 	else:
 		importCode = "from modules."+cmd+" import runModule"
 		exec importCode
+
 		newImageName = runModule(wholecmd, imageName)
 		return newImageName
