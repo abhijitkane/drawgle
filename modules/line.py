@@ -16,7 +16,7 @@ def runModule(wholecmd, imageName):
 	args = wholecmd.split()
 	if len(args)<5 or len(args)>7:
 		print "Correct usage: line x1 y1 x2 y2 [width [color]]"
-		return None
+		return imageName
 
 	x1=args[1]
 	y1=args[2]
@@ -31,7 +31,7 @@ def runModule(wholecmd, imageName):
 
 	if (not(x1.isdigit())) or (not(y1.isdigit())) or (not(x2.isdigit())) or (not(y2.isdigit())) or (not(width.isdigit())):
 		print "Coords must be integers"
-		return None
+		return imageName
 
 	x1=int(x1)
 	x2=int(x2)
@@ -44,3 +44,4 @@ def runModule(wholecmd, imageName):
 	draw.line((x1,y1,x2,y2), fill,width)
 	#del draw
 	image.save('images/'+imageName+'.png')
+	return imageName
