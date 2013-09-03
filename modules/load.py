@@ -1,5 +1,6 @@
 #module load
 import Image
+HELPTEXT = "Loads an existing canvas. Usage: load canvasname"
 #syntax: load canvasname
 def runModule(wholecmd, imageName):
 	

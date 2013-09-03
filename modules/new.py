@@ -1,5 +1,8 @@
 #module new
 import Image
+
+HELPTEXT = "Creates a new canvas. Usage: new imagename width height\n(width, height in pixels)"
+
 #syntax: new canvasname width height
 def runModule(wholecmd, imageName):
 	

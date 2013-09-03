@@ -1,5 +1,8 @@
 #module line
 import Image,ImageDraw
+
+HELPTEXT = "Draws a line on the canvas. Usage: line x1 y1 x2 y2 [width [color]]\nx1,y1 and x2,y2: coordinates of the two end-points\nwidth: width of the line\ncolor: color of the line"
+
 #syntax: line x1 y1 x2 y2 [width [color]]
 def runModule(wholecmd, imageName):
 	#check image exists
@@ -27,7 +30,7 @@ def runModule(wholecmd, imageName):
 		fill=args[6]
 	else:
 		fill="black"
-		width=1
+		width="1"
 
 	if (not(x1.isdigit())) or (not(y1.isdigit())) or (not(x2.isdigit())) or (not(y2.isdigit())) or (not(width.isdigit())):
 		print "Coords must be integers"

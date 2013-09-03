@@ -9,7 +9,7 @@ def begin():
 	line=""
 	imagePath=None
 	while True:
-		line = raw_input(">>")
+		line = raw_input("Drawgle>> ")
 		if(line=="endsession" or line=='ends'):
 			break
 		imagePath = commandParser.parse(line,imagePath);

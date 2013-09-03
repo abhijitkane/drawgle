@@ -1,5 +1,5 @@
 #modules.py
-COMMANDS = ["new","load","help","line"]
+COMMANDS = ["new","load","help","currFile","line","circle","open","showList"]
 #NOTE: Each module must implement runModule(wholecmd,imagename), and return the name of the file operated on
 
 
